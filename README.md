@@ -1,4 +1,4 @@
-# Notes
+# [Notes](/notes.md)
 
 1. # [Docker Notes](/docker.md)
 
