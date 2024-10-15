@@ -39,7 +39,7 @@ A concise guide to essential commands and their outputs.
 
 
 >##  `free -m`
-- lsit the available and total RAM info.
+- list the available and total RAM info.
 ---
 
 
