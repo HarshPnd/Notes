@@ -2,7 +2,7 @@
 ### Updated on February 10, 2022
 I had installed a minimalist CentOS 8 on one of my servers. Installation went successful, however, when I tried to update the system using yum update I see this error message: Failed to download metadata for repo. Below is the complete error.
 
-    [root@autocontroller ~]# yum update
+    sudo yum update
 ----
 
 CentOS-8 - AppStream 70 B/s | 38 B 00:00
@@ -39,18 +39,18 @@ CentOS Linux 8 had reached the End Of Life (EOL) on December 31st, 2021. It mean
 
 #### Step 1: Go to the /etc/yum.repos.d/ directory.
 
-    [root@autocontroller ~]# cd /etc/yum.repos.d/
+    cd /etc/yum.repos.d/
 
 #### Step 2: Run the below commands
 
-    [root@autocontroller ~]# sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*  
+    sudo sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*  
 
 -------
 
-    [root@autocontroller ~]# sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
+    sudo sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
 
 
 #### Step 3: Now run the yum update
 
-    [root@autocontroller ~]# yum update -y
+    sudo yum update -y
 That’s it!

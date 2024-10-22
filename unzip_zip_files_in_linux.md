@@ -66,7 +66,7 @@ These commands should help you effectively manage `.zip` files on your Amazon Li
 
 
 ## You said:
-the unzip command dtuck in between is there any other way to unzip .zip 
+the unzip command stuck in between is there any other way to unzip .zip 
 ## ChatGPT said:
 ### ChatGPT
 If the `unzip` command is stuck or not working properly, there are alternative methods to unzip a `.zip` file on Amazon Linux. Here are some alternatives:

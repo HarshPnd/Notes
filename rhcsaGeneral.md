@@ -103,7 +103,20 @@ A concise guide to essential commands and their outputs.
 - display the list of previously used commands.
 ---
 
+    !(history command no.)
+    !71   
+- reuse the previously used command which is indexed at the mentioned number in history. e.g.- **!71** will run the command at **number 71 in history**.
+---
 
+
+
+    touch file1    
+- creates a new file.
+---
+
+    touch file{1..10}.txt    
+- create 10 files with names as file1.txt, file2.txt and so on.
+---
 
     rm filename.txt    
 - delete the file with the name filename.txt.
@@ -139,5 +152,34 @@ A concise guide to essential commands and their outputs.
 - display the present working directory.
 ---
 
+## Set up local dns
 
+    hostname    
+- display the hostname.
+---
 
+    hostnamectl    
+- display the detailed info about hostname.
+---
+
+    vi /etc/hosts    
+- modify the above file to set up local dns. Use the below mentioned format - 
+
+        192.168.x.x   node1.localdomain
+- save and exit using **Esc** followed by **:wq**
+
+        ping node1.localdomain
+- You can test the DNS resolution by pinging the hostname
+---
+
+## Allow firewall for Apache Server
+
+    sudo firewall-cmd --permanent --add-port=80/tcp
+    sudo firewall-cmd --reload
+    
+- adds the firewall rule to open port 80.
+---
+
+    sudo firewall-cmd --list-all    
+- display the list of configured Firewall rules.
+---

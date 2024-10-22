@@ -237,3 +237,41 @@ to delete all plugins
 
     vagrant plugin expunge --reinstall  
 to reinstall all expunged plugins 
+
+
+# Sample VagrantFile
+
+for the following file you need to create **provision.sh** file with the desired script or you can comment out the **config.vm.provision** line
+
+    Vagrant.configure("2") do |config|
+      config.vm.box = "centos/7"
+      config.vm.provision :shell, path: "provision.sh"
+      # config.vm.network "public_network", ip: "192.168.10.102"
+      config.vm.network "public_network"
+      # config.vm.network "private_network", type: "dhcp" 
+      config.vm.network "forwarded_port", guest: 80, host: 8080, auto_correct: true
+      config.vm.usable_port_range = (8000..9000)
+    end
+
+
+---
+## Sample **provision.sh** for the above file
+
+    #!/bin/bash
+
+    # Set up yum for CentOS
+    cd /etc/yum.repos.d/
+    sudo sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*  
+    sudo sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-*
+
+
+    # Install httpd server
+    sudo yum install httpd -y
+    sudo systemctl start httpd
+
+    # Write the first webpage
+    cd /var/www/html
+    cat >> index.html << EOF
+    Hello World!!!!
+    from node1
+    EOF
