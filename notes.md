@@ -9,3 +9,5 @@
 5. # [Unzip files in Linux](/unzip_zip_files_in_linux.md)
 
 6. # [Vagrant CheatSheet](/vagrant_cheatsheet.md)
+
+6. # [Local DNS Setup](/local_dns_setup.md)
