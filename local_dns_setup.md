@@ -53,7 +53,7 @@ The **`/etc/hosts`** file (on Linux and macOS) or **`hosts`** file (on Windows) 
 
 ---
 
-### 2. **DNS Setup Using Vagrant**
+## 2. **DNS Setup Using Vagrant**
 
 In Vagrant, networking can be configured to simulate environments similar to production with public and private networks, DNS setups, and port forwarding.
 
@@ -100,7 +100,7 @@ In Vagrant, networking can be configured to simulate environments similar to pro
 
 ---
 
-### 3. **DNS Concepts:**
+## 3. **DNS Concepts:**
 
 - **DNS (Domain Name System)**: Converts human-readable domain names (like **`example.com`**) into IP addresses that computers use to communicate. A local DNS setup allows you to resolve custom domain names (e.g., **`mydomain.local`**) to specific IP addresses.
 
@@ -114,7 +114,7 @@ In Vagrant, networking can be configured to simulate environments similar to pro
 
 ---
 
-### 4. **Common Networking Commands Used**:
+## 4. **Common Networking Commands Used**:
 
 1. **IP Configuration**:
    - **Command**: **`ip a`**
@@ -131,7 +131,7 @@ In Vagrant, networking can be configured to simulate environments similar to pro
 
 ---
 
-### 5. **Firewalls and SELinux in CentOS**:
+## 5. **Firewalls and SELinux in CentOS**:
 
 1. **Disabling the Firewall**:
    - Sometimes firewall settings might block external connections to the VM. You can disable **`firewalld`** to test connectivity:
@@ -149,7 +149,7 @@ In Vagrant, networking can be configured to simulate environments similar to pro
 
 ---
 
-### Summary
+## Summary
 
 - **Hosts File Editing**: A quick way to set up local DNS on Windows by mapping domain names to IP addresses.
 - **Vagrant Networking**: Configures multiple VMs with public/private networks and port forwarding.

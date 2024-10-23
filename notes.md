@@ -10,4 +10,6 @@
 
 6. # [Vagrant CheatSheet](/vagrant_cheatsheet.md)
 
-6. # [Local DNS Setup](/local_dns_setup.md)
+7. # [Local DNS Setup](/local_dns_setup.md)
+
+8. # [Troubleshooting Errors](/Troubleshooting_Errors/error_list.md)
